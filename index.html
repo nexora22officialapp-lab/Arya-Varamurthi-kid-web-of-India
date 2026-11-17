@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <!-- GOOGLE SEARCH SEO -->
+  <title>Arya Varamurthi | Kid Web of India – Founder of AT.STAR</title>
+  <meta name="title" content="Arya Varamurthi | Kid Web of India – Founder of AT.STAR" />
+  <meta name="description" content="Official flagship platform of Arya Varamurthi, recognized as the Kid Web of India. Independent solo founder of AT.STAR-PLATFORM with 6+ live websites, AI systems, and 3D simulators." />
+  <meta name="keywords" content="Kid Web of India, Arya Varamurthi, AT.STAR, AT.STAR-PLATFORM, Young Web Developer India, Nexora, Jarvis AI, SNAPX" />
+  <meta name="author" content="Arya Varamurthi" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arya Varamurthi | Kid Web of India" />
+  <meta property="og:description" content="Founder of AT.STAR-PLATFORM. 6+ live web ecosystems, AI assistants, and 3D hardware labs built in India." />
+  <meta property="og:site_name" content="AT.STAR-PLATFORM" />
+
+  <!-- GOOGLE KNOWLEDGE GRAPH SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arya Varamurthi",
+    "alternateName": "Kid Web of India",
+    "jobTitle": "Founder & Chief Architect",
+    "nationality": "Indian",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "AT.STAR-PLATFORM"
+    },
+    "knowsAbout": ["Web Architecture", "Artificial Intelligence", "3D WebGL Simulators", "Mobile Web Ecosystems", "Robotics"],
+    "description": "Arya Varamurthi is an independent Indian tech founder and web architect known as the Kid Web of India, creator of 6+ live web platforms including AT.STAR, Nexora, Jarvis AI, and SNAPX."
+  }
+  </script>
+
+  <!-- LUXURY TYPOGRAPHY -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0b0b0b;
+      --card: rgba(14, 14, 14, 0.88);
+      --gold: #f2e8c6;
+      --gold-rich: #d4af37;
+      --gold-dark: #6b5210;
+      --cream: #f7f3e8;
+      --muted: #8e897e;
+      --border: rgba(242, 232, 198, 0.12);
+      --border-gold: rgba(212, 175, 55, 0.42);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--cream);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.65;
+      background-image: 
+        radial-gradient(ellipse 80% 45% at 50% -10%, rgba(212, 175, 55, 0.15), transparent),
+        radial-gradient(circle at 90% 40%, rgba(242, 232, 198, 0.03), transparent 45%);
+    }
+
+    /* AMBIENT PARTICLE CANVAS */
+    #luxuryCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 46px 0 34px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* LUXURY GOLD PORTRAIT FRAME */
+    .portrait-stage {
+      position: relative;
+      width: 152px;
+      height: 152px;
+      margin-bottom: 24px;
+    }
+
+    .portrait-halo {
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.24) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      inset: -7px;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+    }
+
+    .portrait-border {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(145deg, #fff5d6 0%, #d4af37 50%, #4d3806 100%);
+      box-shadow: 
+        0 18px 40px rgba(0, 0, 0, 0.9),
+        0 0 28px rgba(212, 175, 55, 0.22);
+    }
+
+    .portrait-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #1d1a14, #050505);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .portrait-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cursive-kicker {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.28rem;
+      color: var(--gold);
+      letter-spacing: 0.6px;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.15rem, 6.8vw, 3.75rem);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--cream);
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 .gold-title {
+      display: block;
+      margin-top: 4px;
+      background: linear-gradient(90deg, #f2e8c6 0%, #d4af37 50%, #fff2c2 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmerText 4s linear infinite;
+    }
+
+    @keyframes shimmerText {
+      to { background-position: 200% center; }
+    }
+
+    .hero-desc {
+      max-width: 580px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .hero-desc strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* EXECUTIVE BUTTONS */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .btn {
+      padding: 13px 28px;
+      border-radius: 12px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #f6eed6 0%, #d4af37 100%);
+      color: #050505;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.28);
+    }
+
+    .btn-gold:active {
+      transform: scale(0.97);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-gold);
+      color: var(--gold);
+      backdrop-filter: blur(12px);
+    }
+
+    /* METRICS STRIP */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 14px 0 48px;
+    }
+
+    .metric-box {
+      background: linear-gradient(180deg, rgba(20, 19, 16, 0.85), rgba(10, 10, 10, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 8px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 18%;
+      right: 18%;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent, var(--gold-rich), transparent);
+    }
+
+    .metric-val {
+      font-family: 'Cinzel', serif;
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .metric-lbl {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* ECOSYSTEM SECTION */
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    .section-sub {
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .lux-card {
+      background: linear-gradient(165deg, rgba(22, 21, 18, 0.94) 0%, rgba(8, 8, 8, 0.98) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .lux-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
+    }
+
+    .lux-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(212, 175, 55, 0.12), transparent 65%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .lux-card:hover::after {
+      opacity: 1;
+    }
+
+    .lux-card:hover {
+      border-color: var(--border-gold);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.8), 0 0 22px rgba(212, 175, 55, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .card-kicker {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      color: var(--gold-rich);
+      margin-bottom: 8px;
+    }
+
+    .lux-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.18rem;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .lux-card p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .card-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* FOUNDER MANIFESTO */
+    .manifesto {
+      background: linear-gradient(180deg, rgba(18, 17, 14, 0.9), rgba(8, 8, 8, 0.98));
+      border: 1px solid var(--border-gold);
+      border-radius: 22px;
+      padding: 28px 22px;
+      margin-bottom: 48px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+    }
+
+    .manifesto h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .manifesto p {
+      font-size: 0.9rem;
+      color: #d4cec2;
+      margin-bottom: 12px;
+    }
+
+    .signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.65rem;
+      color: var(--gold);
+      margin-top: 8px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 34px 20px 48px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    /* SHARE MODAL */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(12px);
+      z-index: 500;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #0d0d0d;
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 26px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .modal-box h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .modal-box p {
+      font-size: 0.86rem;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- AMBIENT GOLD DUST CANVAS -->
+  <canvas id="luxuryCanvas"></canvas>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      
+      <!-- CLEAN GOLD PORTRAIT FRAME -->
+      <div class="portrait-stage">
+        <div class="portrait-halo"></div>
+        <div class="orbit-ring"></div>
+        <div class="portrait-border">
+          <div class="portrait-inner">
+            <img src="arya.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+
+      <div class="cursive-kicker">Founder &amp; Chief Architect</div>
+      <h1>
+        Arya Varamurthi
+        <span class="gold-title">Kid Web of India</span>
+      </h1>
+      <p class="hero-desc">
+        Creator of <strong>AT.STAR-PLATFORM</strong>. Engineering <strong>6+ live web ecosystems</strong>, voice-interactive AI assistants, and 3D hardware simulators directly from a single smartphone.
+      </p>
+
+      <div class="btn-row">
+        <a href="#ecosystem" class="btn btn-gold">Explore 6+ Live Websites</a>
+        <button class="btn btn-glass" onclick="openShare()">Share Official Link</button>
+      </div>
+    </section>
+
+    <!-- METRICS -->
+    <section class="metrics-bar">
+      <div class="metric-box">
+        <div class="metric-val">6+</div>
+        <div class="metric-lbl">Live Websites</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-val">100%</div>
+        <div class="metric-lbl">Mobile Built</div>
+      </div>
+      <div class="metric-box">
+        <div class="metric-val">INDIA</div>
+        <div class="metric-lbl">Tech Pioneer</div>
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM APPS (6+ LIVE WEBSITES) -->
+    <section id="ecosystem">
+      <div class="section-header">
+        <h2>6+ Live Websites &amp; Apps</h2>
+        <span class="section-sub">Built by Arya Varamurthi</span>
+      </div>
+
+      <div class="grid-cards">
+        <!-- 1. NEXORA -->
+        <article class="lux-card" onmousemove="cardGlow(event, this)">
+          <div>
+            <div class="card-kicker">Website 01 • Live</div>
+            <h3>Nexora 2.2 / 3.0</h3>
+            <p>Futuristic multi-module web ecosystem featuring galaxy star-rush visuals, English learning, Open Library reading access, smart utilities, and an 8-game arcade zone.</p>
+          </div>
+          <a href="https://nexora22officialapp-lab.github.io/nexora/" target="_blank" rel="noopener" class="card-action">
+            Visit Live Website →
+          </a>
+        </article>
+
+        <!-- 2. AT.STAR PLATFORM -->
+        <article class="lux-card" onmousemove="cardGlow(event, this)">
+          <div>
+            <div class="card-kicker">Website 02 • Live</div>
+            <h3>AT.STAR-PLATFORM</h3>
+            <p>Central digital headquarters and founder showcase uniting Arya Varamurthi's web technologies, developer tools, and upcoming software launches.</p>
+          </div>
+          <a href="#" class="card-action">
+            Visit Live Website →
+          </a>
+        </article>
+
+        <!-- 3. JARVIS AI -->
+        <article class="lux-card" onmousemove="cardGlow(event, this)">
+          <div>
+            <div class="card-kicker">Website 03 • Live</div>
+            <h3>Jarvis Voice AI</h3>
+            <p>Real-time speech-interactive AI assistant engineered by Arya Varamurthi with natural voice synthesis and intelligent conversational responses.</p>
+          </div>
+          <a href="#biography" class="card-action">
+            Visit Live Website →
+          </a>
+        </article>
+
+        <!-- 4. 3D ROBOTICS LAB -->
+        <article class="lux-card" onmousemove="cardGlow(event, this)">
+          <div>
+            <div class="card-kicker">Website 04 • Live</div>
+            <h3>3D Hardware &amp; Robotics Lab</h3>
+            <p>Interactive 3D component inspection and circuit simulator featuring microcontrollers, sensors, DC motors, and electronics prototyping.</p>
+          </div>
+          <a href="#biography" class="card-action">
+            Visit Live Website →
+          </a>
+        </article>
+
+        <!-- 5. SNAPX SOCIAL -->
+        <article class="lux-card" onmousemove="cardGlow(event, this)">
+          <div>
+            <div class="card-kicker">Website 05 • Live</div>
+            <h3>SNAPX Social</h3>
+            <p>Next-generation mobile social web platform with custom creator onboarding, instant photo feeds, and an ultra-sleek dark luxury interface.</p>
+          </div>
+          <a href="#biography" class="card-action">
+            Visit Live Website →
+          </a>
+        </article>
+
+        <!-- 6. AT.STAR DEVELOPER SUITE -->
+        <article class="lux-card" onmousemove="cardGlow(event, this)">
+          <div>
+            <div class="card-kicker">Website 06+ • Live</div>
+            <h3>Web Utility &amp; Game Suite</h3>
+            <p>Collection of standalone browser games, smart calculators, and interactive web prototypes engineered for zero-latency mobile performance.</p>
+          </div>
+          <a href="#biography" class="card-action">
+            Visit Live Website →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- BIOGRAPHY -->
+    <section id="biography" class="manifesto">
+      <h2>Arya Varamurthi — Kid Web of India</h2>
+      <p>
+        <strong>Arya Varamurthi</strong> is an independent young Indian web architect and solo founder of <strong>AT.STAR-PLATFORM</strong>. Known across the web as the <strong>Kid Web of India</strong>, Arya has built and launched <strong>6+ live websites</strong>, AI voice assistants, and 3D hardware simulators without a desktop computer or external funding.
+      </p>
+      <p>
+        Every project inside the ecosystem is engineered for speed, precision UI/UX, and accessible innovation—proving that world-class technology can be built from a single smartphone.
+      </p>
+      <div class="signature">— Arya Varamurthi</div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Arya Varamurthi</strong> • Kid Web of India</p>
+    <p style="margin-top:6px;">Founder of <strong>AT.STAR-PLATFORM</strong> | 6+ Live Websites Engineered in India 🇮🇳</p>
+  </footer>
+
+  <!-- SHARE MODAL -->
+  <div class="modal" id="shareModal" onclick="closeShare(event)">
+    <div class="modal-box">
+      <h3>Official Link</h3>
+      <p>Copy your <strong>Kid Web of India</strong> portfolio link to share on YouTube, Instagram, and Google:</p>
+      <input type="text" id="shareInput" readonly style="width:100%; padding:10px; border-radius:8px; background:#050505; color:#f2e8c6; border:1px solid rgba(212,175,55,0.35); margin-bottom:14px; text-align:center; font-size:0.8rem;" />
+      <button class="btn btn-gold" style="width:100%;" onclick="copyUrl()">Copy Official Link</button>
+    </div>
+  </div>
+
+  <script>
+    /* CARD SPOTLIGHT GLOW */
+    function cardGlow(e, card) {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', x + '%');
+      card.style.setProperty('--my', y + '%');
+    }
+
+    /* SUBTLE LUXURY GOLD PARTICLES */
+    const canvas = document.getElementById('luxuryCanvas');
+    const ctx = canvas.getContext('2d');
+    let w, h, particles = [];
+
+    function initCanvas() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      particles = Array.from({ length: 45 }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.1 + 0.25,
+        v: Math.random() * 0.16 + 0.03
+      }));
+    }
+
+    function renderParticles() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = 'rgba(242, 232, 198, 0.35)';
+      particles.forEach(p => {
+        p.y -= p.v;
+        if (p.y < 0) p.y = h;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(renderParticles);
+    }
+
+    window.addEventListener('resize', initCanvas);
+    initCanvas();
+    renderParticles();
+
+    /* SHARE MODAL */
+    function openShare() {
+      document.getElementById('shareInput').value = window.location.href;
+      document.getElementById('shareModal').classList.add('active');
+    }
+
+    function closeShare(e) {
+      if (e.target.id === 'shareModal') {
+        document.getElementById('shareModal').classList.remove('active');
+      }
+    }
+
+    function copyUrl() {
+      const inp = document.getElementById('shareInput');
+      inp.select();
+      navigator.clipboard.writeText(inp.value);
+      alert('Copied! Share this link on your YouTube & Instagram.');
+    }
+  </script>
+</body>
+</html>
